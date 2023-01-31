@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="col-12 col-md-4 ps-5" *ngFor="let item of users; let i = index">
+    <div class="card alert alert-primary">
+      <div class="card-body">
+        <h1>User {{ i + 1 }}</h1>
+        <h4>id: {{ item._id }}</h4>
+        <p>FirstName: {{ item.fName }}</p>
+        <p>LastName: {{ item.lName }}</p>
+        <p>Age: {{ item.age }}</p>
+        <p>Email: {{ item.email }}</p>
+        <p *ngIf="item.roleId == '63acab8dab39761ecaffbccd'">
+          RoleId: SuperAdmin
+        </p>
+        <p *ngIf="item.roleId == '63aca4b0ab39761ecaffbcb2'">RoleId: Admin</p>
+        <p *ngIf="item.roleId == '63aca7e5ab39761ecaffbcc2'">
+          RoleId: Customer
+        </p>
+        <p>Status: {{ item.status }}</p>
+        <button class="btn btn-info"><a routerLink="editUser" (click)="handeledit(item)">Edit</a></button>
+        <button class="btn btn-danger" (click)="handelDalete(item._id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

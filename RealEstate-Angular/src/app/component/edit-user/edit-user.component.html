@@ -1,0 +1,42 @@
+<div class="w-75 m-auto py-5">
+
+  <form [formGroup]='editForm' (ngSubmit)="submitReigisterForm(editForm)" class="pt-3">
+
+
+    <div class="form-group my-3">
+      <label for="fName">FirstName :</label>
+      <input formControlName="fName" class="form-control" placeholder="{{data.fName}}" type="text"  id="fName">
+
+    </div>
+
+    <div class="form-group my-3">
+      <label for="lName">LastName :</label>
+      <input formControlName="lName" class="form-control"  placeholder="{{data.lName}}" type="text"  id="lName">
+
+    </div>
+
+
+    <div class="form-group my-3">
+      <label for="age">Age :</label>
+      <input formControlName="age" class="form-control" type="number" placeholder="{{data.age}}" id="age">
+
+    </div>
+
+
+    <div class="form-group my-3">
+      <label for="email">Email :</label>
+      <input formControlName="email" class="form-control" type="email" placeholder="{{data.email}}" id="email">
+
+    </div>
+
+    <div class="form-group my-3">
+      <label for="roleId">RoleId :</label>
+      <input formControlName="roleId" class="form-control" type="text" placeholder="{{data.roleId}}" id="roleId">
+    </div>
+    <div class="form-group my-3">
+      <label for="status">Status :</label>
+      <input formControlName="status" class="form-control" type="text" placeholder="{{data.status}}" id="status">
+    </div>
+    <button  class="btn btn-info text-white" type="submit">Update</button>
+  </form>
+</div>

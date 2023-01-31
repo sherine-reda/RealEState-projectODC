@@ -1,0 +1,45 @@
+
+<ngb-carousel class="position-relative" *ngIf="images">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper  ">
+			<img [src]="images[0]" class="d-block w-100 " alt="Random first slide" />
+		</div>
+		<div class="carousel-caption ">
+			<h3>Lorem ipsum dolor sit.</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, laborum?</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[1]" class="d-block w-100 " alt="Random second slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3 >Lorem ipsum dolor sit.</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[2]" class="d-block w-100 " alt="Random third slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>Lorem ipsum dolor sit.</h3>
+			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+		</div>
+	</ng-template>
+
+</ngb-carousel>
+<div class="overlay"></div>
+
+
+<app-properties></app-properties>
+
+<app-contact-us></app-contact-us>
+
+<!-- sec15 -->
+<!-- <div class="d-flex">
+  <button class="btn btn-primary me-2" (click)="increment()">Increment</button>
+  <app-projects [count]="countNum"></app-projects>
+  <button class="btn btn-primary ms-2" (click)="decrement()">decrement</button>
+
+</div> -->

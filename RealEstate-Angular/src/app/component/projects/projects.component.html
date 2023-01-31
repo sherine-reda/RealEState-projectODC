@@ -1,0 +1,43 @@
+<div class="row">
+  <button
+    class="btn btn-success mb-3"
+    *ngIf="userRole == '63acab8dab39761ecaffbccd'"
+  >
+    <a routerLink="addProject">Add Project</a>
+  </button>
+
+  <div
+    class="col-12 col-md-4 ps-5"
+    *ngFor="let item of projects; let i = index"
+  >
+    <div class="card alert alert-primary">
+      <div class="card-body">
+        <h1>project {{ i + 1 }}</h1>
+        <h4>id: {{ item._id }}</h4>
+        <p>projectName: {{ item.projectName }}</p>
+        <p>projectLocation: {{ item.lName }}</p>
+        <div *ngFor="let index of building; let ii = index">
+          <h1>project {{ ii + 1 }}</h1>
+          <h4>id: {{ index._id }}</h4>
+          <p>projectName: {{ index.buildingNumber }}</p>
+          <p>projectLocation: {{ index.floorNumber }}</p>
+        </div>
+        <button
+          class="btn btn-info"
+          *ngIf="userRole == '63acab8dab39761ecaffbccd'"
+        >
+          <a routerLink="editProject">Edit</a>
+        </button>
+        <button
+          class="btn btn-danger"
+          *ngIf="userRole == '63acab8dab39761ecaffbccd'"
+        >
+          Delete
+        </button>
+        <button class="btn btn-warning">
+          <a routerLink="projectDetails">Details</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

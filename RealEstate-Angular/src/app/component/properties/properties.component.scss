@@ -1,0 +1,126 @@
+
+.w-title {
+  font-size: 1.2rem;
+}
+.title h3:after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+.tabs .overlay-item {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 10%;
+  margin: 7px 9px;
+  background-color: white;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  opacity: 0;
+}
+.tabs .item-overlay-contant h6 {
+  font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  position: relative;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+.tabs .item-overlay-contant h6 {
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+.tabs .item-overlay-contant .icon-item {
+  position: relative;
+  margin-top: 30px;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+.tab-content .item:hover .overlay-item {
+  top: 0;
+  opacity: 1;
+}
+.tab-content .item:hover .item-overlay-contant h6 {
+  margin-bottom: 0px !important;
+}
+.tab-content .item:hover .item-overlay-contant .icon-item {
+  margin-top: 10px !important;
+}
+
+.tab-content .icon-item a {
+  border: solid 1px #1c1c1c;
+  border-radius: 50%;
+
+  background-color: #1c1c1c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 3px 5px;
+}
+.tab-content .icon-item a:hover {
+  background-color: white;
+}
+.tab-content .icon-item a:hover i {
+  color: #1c1c1c !important;
+}
+
+  .nav-tabs{
+  --bs-nav-tabs-border-width: 0px;
+  margin: auto !important;
+}
+ .nav-tabs .nav-link.active::before {
+ content: "";
+  background-color: rgb(15, 15, 15);
+  width: 45%;
+  position: absolute;
+  margin-left: 0px;
+  bottom: 25%;
+  height: 2px;
+}
+.nav-tabs .nav-link::before {
+  content: "";
+  background-color: #fff;
+  width: 0;
+  position: absolute;
+  margin-left: 0px;
+  bottom: 25%;
+  height: 2px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+ .nav {
+  justify-content: center;
+  margin: 2rem !important;
+}
+ .nav-tabs .nav-link{
+  margin: 0 10px;
+  color: #222;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}

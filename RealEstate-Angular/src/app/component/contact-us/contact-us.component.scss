@@ -1,0 +1,44 @@
+.contact .item {
+  text-align: center;
+}
+.contact .item i {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #1c1c1c;
+  padding: 22px 22px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+.contact .item:hover i {
+  color: #1c1c1c !important;
+  background-color: #24baef !important;
+}
+.contact .item p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+  text-align: center;
+}
+.contact .item h6 {
+ color: #1c1c1c;
+ font-weight: 700;
+ margin-bottom: 10px;
+}
+.contact .form input,
+textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  background: #f4f4f4;
+  margin-bottom: 1rem;
+}

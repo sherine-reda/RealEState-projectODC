@@ -1,0 +1,31 @@
+<div class="container text-center mt-5">
+  <div class="">
+    <div class="" >
+      <div>
+        <form *ngIf="!data.image" class="row" #fileUpload="ngForm" (ngSubmit)="handleSubmit()">
+          <div class="col-12">
+              <input type="file" class="form-control" (change)="handleChange($event)">
+          </div>
+          <div class="col-12">
+              <button class="btn btn-primary">
+                  update Image
+              </button>
+          </div>
+      </form>
+      </div>
+
+    </div>
+
+      <div class="w-100 ">
+        <img src={{pathImg}} class="w-25 p-5 text-center rounded-circle">
+      </div>
+      <h1>{{data.fName}}  {{data.lName}}</h1>
+      <h3>{{data.email}}</h3>
+      <h3>{{data._id}}</h3>
+      <h2 *ngIf="data.roleId == '63acab8dab39761ecaffbccd'">Super Admin</h2>
+      <h2 *ngIf="data.roleId == '63aca4b0ab39761ecaffbcb2'"> Admin</h2>
+      <h2 *ngIf="data.roleId == '63aca7e5ab39761ecaffbcc2'">Customer</h2>
+  </div>
+
+</div>
+

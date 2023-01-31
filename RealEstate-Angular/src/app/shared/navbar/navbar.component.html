@@ -1,0 +1,124 @@
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"
+        ><img src="assets/img/logo.png" class="w-25 rounded-5"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="isLogin"
+              class="nav-link active"
+              aria-current="page"
+              routerLink="user-profile"
+              >Profile</a
+            >
+          </li>
+
+          <li *ngIf="isSuperAdmin && isLogin" >
+            <a  class="nav-link active"   aria-current="page" routerLink="alluser">AllUsers</a>
+          </li>
+
+          <li *ngIf="isSuperAdmin && isLogin">
+
+            <a  class="nav-link active"   aria-current="page" routerLink="projects">ِAllProjects</a>
+
+          </li>
+
+          <li  *ngIf="isSuperAdmin && isLogin" class="d-inline-block" ngbDropdown #myDrop3="ngbDropdown">
+            <button
+              type="button"
+              class="btn text-white me-2"
+              id="dropdownManual"
+              ngbDropdownAnchor
+              (focus)="myDrop3.open()"
+            >
+            Payments
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+              <button ngbDropdownItem><a  class="dropdown-item text-dark"  routerLink="addpayment">AddPayments</a></button>
+              <button ngbDropdownItem><a  class="dropdown-item text-dark"  routerLink="allpayment">ِAllPayments</a></button>
+              <button ngbDropdownItem><a  class="dropdown-item text-dark"  routerLink="editpayment">EditPayments</a></button>
+              <button ngbDropdownItem><a  class="dropdown-item text-dark"  routerLink="deletepayment">DeletePayments</a></button>
+            </div>
+          </li>
+
+          <!--  -->
+
+          <li *ngIf="(!isSuperAdmin)" class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="projects"
+              >Projects</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+            *ngIf="(!isSuperAdmin) && isLogin"
+              class="nav-link active"
+              aria-current="page"
+              routerLink="payment"
+              >Payment</a
+            >
+          </li>
+
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <div class="socialmedia">
+          <i class="fab mx-2 fa-instagram"></i>
+          <i class="fab mx-2 fa-facebook"></i>
+          <i class="fab mx-2 fa-twitter"></i>
+        </div>
+
+        <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              *ngIf="!isLogin"
+              class="nav-link active"
+              aria-current="page"
+              routerLink="login"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="!isLogin"
+              class="nav-link active"
+              aria-current="page"
+              routerLink="register"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page"
+              (click)="isLogOut()">Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
